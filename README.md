@@ -62,12 +62,6 @@ git clone https://github.com/devotedbee/statistics101-python-samples.git
 cd statistics101-python-samples
 ```
 
-Install dependencies (optional):
-
-```bash
-python -m pip install -r requirements.txt
-```
-
 ## Usage
 
 Run a script directly:
