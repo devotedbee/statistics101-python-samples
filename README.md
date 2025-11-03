@@ -32,7 +32,7 @@ The goal is to provide clear, executable examples that demonstrate statistical c
 ## Requirements
 
 - Python 3.8 or newer
-- Recommended libraries (add to `requirements.txt` if you provide one):
+- Recommended libraries
   - numpy
   - scipy
   - pandas
@@ -41,12 +41,6 @@ The goal is to provide clear, executable examples that demonstrate statistical c
   - jupyter (optional, for notebooks)
 
 Install the recommended packages with pip:
-
-```bash
-python -m pip install -r requirements.txt
-```
-
-If you don't have a `requirements.txt`, install packages individually, e.g.:
 
 ```bash
 python -m pip install numpy scipy pandas matplotlib seaborn
@@ -102,52 +96,6 @@ or
 jupyter lab
 ```
 
-## Examples
-
-Below are example command-line uses you can adapt to the actual scripts in this repository.
-
-- Compute summary statistics:
-```bash
-python examples/descriptive_stats.py data/sample.csv
-```
-
-- Simulate coin flips and plot results:
-```bash
-python examples/simulations/coin_flip_sim.py --trials 10000 --plot
-```
-
-- Run a simple t-test:
-```bash
-python examples/hypothesis/t_test_demo.py --group1 g1.csv --group2 g2.csv
-```
-
-Note: Replace paths and script names with those present in the repository. If you don't have these scripts yet, use the above as a template for your own examples.
-
-## Project structure
-
-A suggested layout — adapt to your repository's actual files:
-
-```
-statistics101-python-samples/
-├── examples/
-│   ├── descriptive_stats.py
-│   ├── probability_distributions.py
-│   ├── sampling_demo.py
-│   ├── hypothesis_tests/
-│   │   └── t_test_demo.py
-│   └── simulations/
-│       └── coin_flip_sim.py
-├── notebooks/
-│   └── stats101-tutorial.ipynb
-├── data/
-│   └── sample.csv
-├── requirements.txt
-├── README.md
-└── LICENSE
-```
-
-If you want me to generate a project file list based on the actual repository contents, say so and I will inspect the repository and produce an exact listing.
-
 ## Contributing
 
 Contributions are welcome! A simple guide:
@@ -168,25 +116,14 @@ Contributions are welcome! A simple guide:
 Guidelines:
 - Keep scripts small and focused on a single concept.
 - Add comments and a short header describing the purpose, inputs, and outputs.
-- If you add dependencies, update `requirements.txt`.
 - Include sample input data (or a generator) when appropriate.
 
-## Testing
-
-There are no formal tests by default. For reproducible examples, consider:
-
-- Adding simple assert-based smoke tests in a `tests/` folder.
-- Using pytest for any non-trivial functions:
-  ```bash
-  python -m pip install pytest
-  pytest
-  ```
 
 ## License
 
 This repository is available under the MIT License.
 
-Copyright (c) 2025 devotedbee
+Copyright (c) 2025 cw
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -203,8 +140,6 @@ furnished to do so, subject to the following conditions:
   LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
   OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
   THE SOFTWARE.
-
-Replace YEAR and Your Name with the appropriate values and add a `LICENSE` file at the repository root.
 
 ## Contact
 
