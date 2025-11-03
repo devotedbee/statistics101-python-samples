@@ -2,27 +2,35 @@ import numpy as np
 from scipy.stats import norm
 
 # --- BINOMIAL PARAMETERS ---
-n = 46
-p = 0.6
+# Context: We have 46 independent trials (n) where the probability of success (p) is 0.6.
+# Example: A quality control check on 46 items, each having a 60% chance of passing.
+n = 46  # Total number of trials
+p = 0.6 # Probability of success
 
 # 1. Calculate the Mean (mu) and Standard Deviation (sigma)
+# These are the *expected* values for the underlying Binomial distribution.
+# Mean (mu): Expected number of successes (E[X] = n * p)
 mu = n * p
+# Standard Deviation (sigma): Measure of spread (SD[X] = sqrt(n * p * (1 - p)))
 sigma = np.sqrt(n * p * (1 - p))
 
-# --- NORMAL DISTRIBUTION CALCULATION (for approximation) ---
-# Note: The parameters mu and sigma are now calculated above.
-# x will be used with continuity correction for a proper approximation
-# For demonstration, we'll use a single point x=12.5 (the upper bound for P(X=12))
+# --- NORMAL DISTRIBUTION CALCULATION (for approximation demonstration) ---
+# Check Condition: For the approximation to be valid, n*p and n*(1-p) must both be >= 10.
+# Here, n*p = 27.6 and n*(1-p) = 18.4. Both are >= 10, so the approximation is appropriate.
 
-# FIX APPLIED: Retyped this line to remove the invalid characters.
-x_approx = 36  # Using the upper continuity correction bound for the previous problem (X=12 -> 11.5 to 12.5)
+# x_approx represents a value on the continuous Normal curve.
+x_approx = 36  # This point (36) is for demonstration only. In practice, you use the Continuity Correction Factor (CCF) here.
 
-# Calculate the normal probability (PDF value at x_approx)
-# For approximating P(X=12), you'd typically use the CDF (as shown in the previous calculation),
-# but this script calculates the PDF, which is the height of the curve at a point.
+# Calculate the normal probability density function (PDF) value at x_approx
+# PDF is the HEIGHT of the bell curve at this point, NOT the probability P(X=x).
+# We use the calculated Binomial mu and sigma as the parameters for the Normal curve.
 norm_prob = norm.pdf(x_approx, mu, sigma)
 
-print(f"Binomial Mean (mu): {mu:.4f}")
-print(f"Binomial Standard Deviation (sigma): {sigma:.4f}")
+# --- OUTPUT ---
+print(f"Binomial Sample Size (n): {n}")
+print(f"Success Probability (p): {p}")
 print("-" * 35)
-print(f"Normal distribution PDF value at x={x_approx}: {norm_prob:.4f}")
+print(f"Binomial Mean (mu): {mu:.4f} (Expected number of successes)")
+print(f"Binomial Standard Deviation (sigma): {sigma:.4f} (Spread of the outcomes)")
+print("-" * 35)
+print(f"Normal distribution PDF value (Density) at x={x_approx}: {norm_prob:.4f}")

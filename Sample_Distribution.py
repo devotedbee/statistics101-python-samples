@@ -1,21 +1,28 @@
 import numpy as np  # Import the NumPy library for numerical operations
 
-# Given parameters
-mu = 68  # Population mean 'μ' 
-sigma = 4  # Population standard deviation 'σ'
-n = 52  # Sample size 'n'
+# --- POPULATION PARAMETERS ---
+# Context: Imagine a population where the average height is 68 inches, with a standard deviation of 4 inches.
+mu = 68    # Population mean 'μ' (The average height of all individuals)
+sigma = 4  # Population standard deviation 'σ' (The variability of individual heights)
+n = 52     # Sample size 'n' (The number of individuals measured in each sample)
 
-# Mean of the sample distribution is the same as the population mean
+# --- CENTRAL LIMIT THEOREM CALCULATIONS ---
+
+# 1. Mean of the Sample Distribution (Mean of means)
+# According to the CLT, the mean of the sampling distribution (μₓ) is always equal to the population mean (μ).
 mu_x = mu  
 
-# Standard deviation of the sample distribution (standard error)
-# It is calculated as the population standard deviation divided by the square root of the sample size
+# 2. Standard Deviation of the Sample Distribution (Standard Error)
+# This measures the variability of the sample means around the population mean.
+# It is calculated as the population standard deviation divided by the square root of the sample size.
 sigma_x = sigma / np.sqrt(n)  
 
-# Calculate n times the square root of σ
-result = n * np.sqrt(sigma)  # n * sqrt(σ)
+# --- EXTRANEOUS CALCULATION (for demonstration only) ---
+# This calculation is not directly related to the Central Limit Theorem or sampling distribution properties.
+result_demonstration = n * np.sqrt(sigma)  # n * sqrt(σ)
 
-# Display the results
-print(f"Mean of the sample distribution (μₓ): {mu_x}")  # Print the mean
-print(f"Standard deviation of the sample distribution (σₓ): {sigma_x}")  # Print the standard deviation
-print(f"{n} times the square root of σ: {result}")  # Print the result of n * sqrt(σ)
+# --- DISPLAY RESULTS ---
+print("--- Central Limit Theorem Results ---")
+print(f"Mean of the sampling distribution (μₓ): {mu_x:.2f}")
+print(f"Standard Error (σₓ) of the mean: {sigma_x:.4f}")
+print(f"Demonstration value (n * sqrt(σ)): {result_demonstration:.4f}")

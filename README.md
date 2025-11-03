@@ -9,16 +9,13 @@ Python Scripts for Learning Statistics 101
 - [Requirements](#requirements)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Examples](#examples)
-- [Project structure](#project-structure)
 - [Contributing](#contributing)
-- [Testing](#testing)
 - [License](#license)
 - [Contact](#contact)
 
 ## Overview
 
-This repository contains simple, well-documented Python scripts intended to help students and self-learners practice and understand foundational concepts from a Statistics 101 course. Scripts cover topics such as descriptive statistics, probability distributions, simple hypothesis tests, sampling, visualization, and simulation.
+This repository contains simple, Python scripts intended to help students and self-learners practice and understand foundational concepts from a Statistics 101 course. Scripts cover topics such as descriptive statistics, probability distributions, simple hypothesis tests, sampling, visualization, and simulation.
 
 The goal is to provide clear, executable examples that demonstrate statistical concepts using Python's standard scientific libraries.
 

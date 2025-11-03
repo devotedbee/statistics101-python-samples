@@ -1,9 +1,19 @@
 from scipy.stats import poisson
 
-# Parameters
-lam = 5      # average rate (lambda)
-x = 3        # number of events
+# --- CONTEXT & PARAMETERS ---
+# Imagine a customer support call center that receives an average of lam=5 calls per hour.
+# We want to find the probability of receiving exactly x=3 calls in the next hour.
 
-# Calculate the Poisson probability
+# 1. Average Rate (lam):
+lam = 5      # The average number of events in the specified interval (lambda, λ).
+
+# 2. Number of Events (x):
+x = 3        # The exact number of events we are interested in observing.
+
+# --- CALCULATION ---
+# poisson.pmf(x, lam) calculates P(X = x).
+# The Poisson PMF formula is: P(X=x) = (e^(-λ) * λ^x) / x!
 poisson_prob = poisson.pmf(x, lam)
-print(f"Poisson distribution probability for x={x}: {poisson_prob:.4f}")
+
+# --- OUTPUT ---
+print(f"Poisson distribution PMF for x={x} (P(X={x})): {poisson_prob:.4f}")
