@@ -7,9 +7,9 @@ from scipy.stats import norm # Import the norm object for Z-score and probabilit
 # from drawing repeated samples of size n=36 from this population.
 
 # --- POPULATION PARAMETERS ---
-mu = 89     # Population mean 'μ' (The center of the population distribution)
-sigma = 18  # Population standard deviation 'σ' (The variability of individuals in the population)
-n = 36      # Sample size 'n' (The number of observations in each sample)
+mu = 89 # Population mean 'μ' (The center of the population distribution)
+sigma = 18 # Population standard deviation 'σ' (The variability of individuals in the population)
+n = 36 # Sample size 'n' (The number of observations in each sample)
 
 # --- CENTRAL LIMIT THEOREM CALCULATIONS ---
 # The CLT states that the sampling distribution of the mean will be approximately normal
@@ -26,9 +26,9 @@ sigma_x = sigma / np.sqrt(n)
 
 # --- HYPOTHETICAL TARGET SAMPLE MEANS ---
 # These are the specific sample means (x̄) we are testing probabilities against.
-x_bar_1 = 85  # Target 1: A value below the population mean (μ=89).
-x_bar_2 = 91  # Target 2: A value above the population mean.
-x_bar_3 = 93  # Target 3: A second, higher value above the mean, used for the 'between' probability.
+x_bar_1 = 85 # Target 1: A value below the population mean (μ=89).
+x_bar_2 = 91 # Target 2: A value above the population mean.
+x_bar_3 = 93 # Target 3: A second, higher value above the mean, used for the 'between' probability.
 
 # --- PROBABILITY CALCULATIONS ---
 # We calculate the probability (P) of obtaining a sample mean (X̄) in the specified range.
